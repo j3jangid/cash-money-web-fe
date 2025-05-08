@@ -1,5 +1,6 @@
 import React from 'react'
 import { TbDatabaseX } from 'react-icons/tb'
+import { Link } from 'react-router-dom'
 
 function ErrorPage() {
     return (
@@ -7,8 +8,13 @@ function ErrorPage() {
             <div>
                 <TbDatabaseX className='fs-1 themeTextColor' />
             </div>
-            <div>
-                Data Not Available
+            <div className='d-flex flex-column justify-content-center align-items-center'>
+                <h3>
+                    Not Available
+                </h3>
+                <button className='btn btn-primary px-2'>
+                    <Link className='text-white' to={'/home'}>Go To Home</Link>
+                </button>
             </div>
         </div>
     )

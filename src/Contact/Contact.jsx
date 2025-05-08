@@ -23,28 +23,30 @@ function Contact() {
               <center>
                 <p className='boxHeading'>Write Your Message</p>
               </center>
-              <div className='d-flex flex-column gap-2 mt-3'>
-                <div className='d-flex gap-2'>
-                  <label htmlFor="name" className='inputLable' style={{ width: '20%' }}>Name:</label>
-                  <input type="text" class="form-control" id='name' placeholder="Name" />
+              <form action="https://formspree.io/f/xrbqkbbo" method="post">
+                <div className='d-flex flex-column gap-2 mt-3'>
+                  <div className='d-flex gap-2'>
+                    <label htmlFor="name" className='inputLable' style={{ width: '20%' }}>Name:</label>
+                    <input type="text" class="form-control" id='name' name='name' placeholder="Name" required />
+                  </div>
+                  <div className='d-flex gap-2'>
+                    <label htmlFor="mobile" className='inputLable' style={{ width: '20%' }}>Mobile Number:</label>
+                    <input type="number" class="form-control" id='mobile' name='mobile' placeholder="Mobile Number" required />
+                  </div>
+                  <div className='d-flex gap-2'>
+                    <label htmlFor="email" className='inputLable' style={{ width: '20%' }}>Email Id:</label>
+                    <input type="email" class="form-control" id='email' name='email' placeholder="Email Id" required />
+                  </div>
+                  <div className='d-flex gap-2'>
+                    <label htmlFor="message" className='inputLable' style={{ width: '20%' }}>Message:</label>
+                    <textarea class="form-control" id='message' name='message' placeholder='Message' required></textarea>
+                  </div>
                 </div>
-                <div className='d-flex gap-2'>
-                  <label htmlFor="mobile" className='inputLable' style={{ width: '20%' }}>Mobile Number:</label>
-                  <input type="number" class="form-control" id='mobile' placeholder="Mobile Number" />
+                <div className='d-flex justify-content-between gap-2 mt-3'>
+                  <button className='btn btn-danger' type='reset'>Clear</button>
+                  <button className='btn btn-success' type='submit'>Submit</button>
                 </div>
-                <div className='d-flex gap-2'>
-                  <label htmlFor="email" className='inputLable' style={{ width: '20%' }}>Email Id:</label>
-                  <input type="email" class="form-control" id='email' placeholder="Email Id" />
-                </div>
-                <div className='d-flex gap-2'>
-                  <label htmlFor="message" className='inputLable' style={{ width: '20%' }}>Message:</label>
-                  <textarea class="form-control" id='message' placeholder='Message'></textarea>
-                </div>
-              </div>
-              <div className='d-flex justify-content-between gap-2 mt-3'>
-                <button className='btn btn-danger'>Clear</button>
-                <button className='btn btn-success'>Submit</button>
-              </div>
+              </form>
             </Paper>
           </div>
           <div className='col-6 p-0'>

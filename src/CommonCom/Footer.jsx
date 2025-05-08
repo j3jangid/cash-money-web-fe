@@ -26,6 +26,12 @@ function Footer() {
                             <span className='regularText'>+91-8986454772</span>
                             <span className='regularText'>support@mycashmoney.info</span>
                         </div>
+                        <div className='pageSubHeading mt-2'>Legal Policy</div>
+                        <div className='d-flex flex-column gap-1 ps-1'>
+                            <Link className='regularText' to={'/terms-conditions'}>Terms & Conditions</Link>
+                            <Link className='regularText' to={'/legal'}>Legal</Link>
+                            <Link className='regularText' to={'/Policy'}>Policy</Link>
+                        </div>
                     </div>
                     <div className='col-3'>
                         <div className='pageSubHeading'>Contact-Us</div>
@@ -35,7 +41,7 @@ function Footer() {
                                 <span className='regularText'>Head Office</span>
                             </div>
                             <span className='regularText'>
-                                Pl.no 3/406, begunia, dumduma, Bhubaneswar, Odisha, 751019
+                                Plot No. 40/444, Begunia, Dumuduma, Bhubaneswar, Odisha, 751019
                             </span>
                             <span className='regularText'>+91-8986454772</span>
                             <span className='regularText'>Infocashmoney97@gmail.com</span>
