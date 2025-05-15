@@ -1,28 +1,12 @@
-import React, { useState } from 'react'
-// import ErrorPage from '../ErrorPage'
-import { Box, Modal, Paper } from '@mui/material'
+import { Paper } from '@mui/material'
 import wellcomeImg from '../img/vecteezy_digital-payment-system-secure-fast-and-convenient-online_54716341.webp'
 import wellcomeImg1 from '../img/vecteezy_global-business-growth-analyst-and-asset-investment-chart_27244714.png'
 import services from '../jsonData/services'
-import SignUP from '../SignUP'
-
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 600,
-    bgcolor: 'whiteSmoke',
-    border: '1px solid #000',
-    borderRadius: '7px',
-    boxShadow: 24,
-    p: 1,
-};
+import { useNavigate } from 'react-router-dom'
 
 function Home() {
     const servicesData = services
-    const [open, setOpen] = useState(false);
-    const handleClose = () => setOpen(false);
+    const navigate = useNavigate()
     return (
         <div>
             <Paper elevation={1} sx={{ paddingX: 2, paddingY: 1 }}>
@@ -35,7 +19,7 @@ function Home() {
                             <div className='d-flex flex-column justify-content-center align-items-center' style={{ height: '100%' }}>
                                 <h1>Welcome to <span className='pageHeading'>CASH MONEY</span></h1>
                                 <p className='pageSubHeading'>Your one-stop solution for all your Payment needs.</p>
-                                <button className='btn btn-primary mt-2' onClick={() => setOpen(true)}>Sign Up Today</button>
+                                <button className='btn btn-primary mt-2' onClick={() => navigate('/signUp')}>Sign Up Today</button>
                             </div>
                         </div>
                         <div className="col-12 col-md-6">
@@ -86,28 +70,11 @@ function Home() {
                 <div className='lightBackground p-3 rounded-3 d-flex justify-content-between align-items-center'>
                     <span className='boxHeading'>Start Your Journy With <span className='pageSubHeading'>CASH MONEY</span>.</span>
                     <span>
-                        <button className='btn btn-primary mt-2' onClick={() => setOpen(true)}>Register Now</button>
+                        <button className='btn btn-primary mt-2' onClick={() => navigate('/signUp')}>Register Now</button>
                     </span>
                 </div>
-            </Paper>
-
-            <div>
-                {/* <Button onClick={handleOpen}>Open modal</Button> */}
-                <Modal
-                    open={open}
-                    onClose={handleClose}
-                >
-                    <Box sx={style}>
-                        <Paper elevation={1} sx={{ paddingX: 2, paddingY: 1, mb: 1 }}>
-                            <div className='pageHeading'>Sign Up</div>
-                        </Paper>
-                        <SignUP />
-                    </Box>
-                </Modal>
-            </div>
-
-            {/* <ErrorPage /> */}
-        </div>
+            </Paper >
+        </div >
     )
 }
 

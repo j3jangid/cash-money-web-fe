@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import SignUP from '../SignUP';
 
 // import Policy from '../TermsAndConditions/Policy';
 // import Legal from '../TermsAndConditions/Legal';
@@ -29,7 +30,7 @@ function View() {
                     <Route path='/pricing' Component={Pricing} />
                     <Route path='/about-us' Component={AboutUs} />
                     <Route path='/contact' Component={Contact} />
-                    {/* <Route path='/signUp' Component={SignUP} /> */}
+                    <Route path='/signUp' Component={SignUP} />
 
                     <Route path='/terms-conditions' Component={TermsAndConditions} />
                     <Route path='/legal' Component={Legal} />

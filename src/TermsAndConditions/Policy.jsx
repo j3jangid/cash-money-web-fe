@@ -158,7 +158,7 @@ function Policy() {
             </Paper >
             <Paper elevation={1} sx={{ paddingX: 2, paddingY: 1, mt: 1 }}>
                 <div className='container'>
-                    <p className='pageSubHeading'>Privacy Policy</p>
+                    <p className='pageSubHeading'>Cancellation Policy</p>
                     <p className='regularText'>At CASH MONEY, we strive to provide exceptional service and transparent policies. Please read the following terms regarding cancellations:</p>
                     <hr />
                     <ol className='mt-2'>
